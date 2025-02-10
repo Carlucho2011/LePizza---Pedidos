@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/calling-heart');
+
+body {
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+}
+
+.app-header {
+    background-color: rgb(200, 41, 40);
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    z-index: 1000;
+}
+
+.app-header h1 {
+    color: #f4f4f4;
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Calling Heart', sans-serif;
+}
+
+/* Botones del menú y carrito */
+.menu-btn, .cart-btn, .close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    background-color: #642121;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    padding: 60px 20px 0;
+    margin-top: 40px;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+#sidebarLeft, #sidebarRight {
+    color: #f4f4f4;
+}
+
+#sidebarRight li {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+}
+
+#sidebarRight li button {
+    background-color: rgb(255, 212, 57);
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 5px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin: 10px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f4f4f4;
+    font-weight: bold;
+}
+
+.pizza-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    margin-top: 70px;
+    padding: 10px;
+}
+
+.pizza-item {
+    padding: 15px;
+    margin-top: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.pizza-item-index {
+    padding: 15px;
+    margin: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.pizza-item img {
+    width: 200px;
+    height: auto;
+}
+
+.pizza-item h2 {
+    background-color: rgb(241, 211, 36);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.pizza-item-index h2 {
+    background-color: rgb(241, 211, 36);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.list-btn {
+    background-color: #28a745;
+    border: none;
+    padding: 10px;
+    color: #f4f4f4;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.list-btn a {
+    text-decoration: none;
+    color: #f4f4f4;
+}
+
+.quantity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    background-color: rgba(241, 211, 36, 0.050);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin: 30px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.button-input {
+    color: #f4f4f4;
+    border: none;
+    width: 50px;
+    background-color: rgb(241, 211, 36);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+
+.quantity input {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    width: 50px;
+    padding: 15px;
+}
+
+#confirm-button, #cancel-button {
+    width: 100px;
+    padding: 10px; 
+}
+
+.buttonsQuantity {
+    display: flex;
+    flex-direction: row;
+}
+
+#confirm-button {
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: #f4f4f4;
+    margin-right: 5px;
+}
+
+#cancel-button {
+    background-color: rgb(200, 41, 40);
+    border: none;
+    border-radius: 5px;
+    color: #f4f4f4;
+}
+
+.custom-pizza-btn {
+    padding: 15px;
+    background-color: rgb(241, 211, 36);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.custom-pizza-btn a {
+    text-decoration: none;
+    color: black;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.app-footer {
+    text-align: center;
+    background-color: rgb(187, 39, 39);
+    color: #f4f4f4;
+    padding: 10px 0;
+}
+
+.close-btn {
+    background-color: rgb(200, 41, 40);
+    border-radius: 10px;
+    margin: 20px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+#tucarrito {
+    background-color: rgb(255, 212, 57);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+}
+
+@media (min-width:600px) {
+    body {
+        background-color: #642121;
+        margin: 0;
+        font-size: 24px;
+    }
+    
+    .pizza-list {
+        Display:grid;
+    grid-template-columns: 
+        repeat(
+            auto-fit,
+            minmax(300px,1fr)
+
+        );
+    }
+
+    .app-header h1 {
+        color: #f4f4f4;
+        text-align: center;
+        font-size: 55px;
+        font-family: 'Calling Heart', sans-serif;
+}
+
+.menu-btn, .cart-btn, .close-btn{
+    font-size: 40px;
+    padding: 22px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+}
+
+@media (min-width:660px){
+    .custom-pizza-btn {
+        margin-bottom: 5vh;
+    }
+}
+
+@media (min-width:700px){
+    
+    .custom-pizza-btn {
+        margin-bottom: 10vh;
+    }
+
+    .pizza-item {
+        margin: 60px;
+        padding: 20px;
+    }
+
+}
+
+@media (min-width:739px){
+    .custom-pizza-btn {
+        margin-bottom: 5vh;
+        margin-top: 5vh;
+        padding: 30px;
+        margin-inline: 50px;
+    }
+
+    .custom-pizza-btn a {
+        font-size: 30px;
+    }
+}
+
+@media (min-width:912px){
+    .custom-pizza-btn {
+        margin-bottom: 10vh;
+        margin-top: 8vh;
+        padding: 30px;
+        margin-inline: 50px;
+    }
+
+    .custom-pizza-btn a {
+        font-size: 35px;
+    }
+}
+
+@media (min-width:912px){
+    .pizza-list{
+        margin-top: 120px;
+    
+    }
+    
+    .custom-pizza-btn {
+        margin-bottom: 10vh;
+        margin-top: 8vh;
+        padding: 30px;
+        margin-inline: 50px;
+    }
+
+    .custom-pizza-btn a {
+        font-size: 35px;
+    }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Margarita - App Móvil</title>
+    <link rel="stylesheet" href="/Assets/Css/def.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <button class="menu-btn" onclick="toggleSidebar()"><i class='bx bx-menu'></i></button>
+            <h1>Lepizza</h1>
+            <button class="cart-btn" onclick="toggleCart()"><i class='bx bx-cart'></i></button>
+        </header>
+
+        <aside class="sidebar" id="sidebarLeft">
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Pizzas</a></li>
+                        <hr>
+                    <li><a href="/Pgs/Soon.html">Bebidas</a></li>
+                        <hr>
+                    <li><a href="/Pgs/Soon.html">Promociones</a></li>
+                        <hr>
+                    <li><a href="/Pgs/Soon.html">Pizza Personalizada</a></li>
+                        <hr>   
+                </ul>
+                <button class="close-btn" onclick="toggleSidebar()"><i class='bx bx-arrow-back'></i></button>
+            </nav>
+        </aside>
+
+        <aside class="sidebar" id="sidebarRight">
+            
+            <h2 id="tucarrito"><i class='bx bx-cart'></i>Tu Carrito</h2>
+            <ul id="cartItems"></ul>
+            <li id="subtotal"></li>
+            <li><button class="finalizar-pedido-btn" onclick="finalizarPedido()">Finalizar Pedido</button></li>
+            <button class="close-btn" onclick="toggleCart()"><i class='bx bx-arrow-back'></i></button>
+        </aside>
+
+        <main class="pizza-list">
+            <div id="pgs-item" class="pizza-item">
+                <img src="/Assets/img/pizza-2.png" alt="Pizza Margarita">
+                <h3>2.10 Ref</h3>
+                <h2>Pizza Pepperoni</h2>
+                <ul>
+                    <li>Salsa de Tomate</li>
+                    <li>Pepperoni</li>
+                    <li>Queso Mozarella</li>
+                </ul>
+                <button class="list-btn" onclick="showQuantityInput('Pizza Pepperoni', 2.10)">Añadir al <i class='bx bx-cart'></i></button>
+            </div>
+
+            <div class="quantity" id="quantity-input" style="display:none;">
+                <label for="quantity">Cuantas desea agregar</label>
+               <div class="quantity-select">
+                    <button  id="button-1" class="button-input" onclick="updateQuantity(-1)"><i class='bx bxs-minus-circle'></i></button>
+                    <input type="number" id="quantity" min="1" value="1">
+                    <button id="button-2" class="button-input" onclick="updateQuantity(1)"><i class='bx bxs-plus-circle'></i></button>
+                </div>
+                <div class="buttonsQuantity">
+                    <button id="confirm-button" onclick="confirmQuantity()">Confirmar</button>
+                    <button id="cancel-button" onclick="cancelInput()">Cancelar</button>
+                </div>
+            </div>
+        
+        </main>
+        <script src="/Assets/Js/script.js"></script>
+    </div>
+    <footer class="app-footer">
+        <p>&copy; 2025 LePizza</p>
+    </footer>
+</body>
+</html>

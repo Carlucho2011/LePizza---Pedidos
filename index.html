@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LePizza - Pedidos</title>
+    <link rel="stylesheet" href="/Assets/Css/def.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <button class="menu-btn" onclick="toggleSidebar()"><i class='bx bx-menu'></i></button>
+            <h1>Nuestras Pizzas</h1>
+            <button class="cart-btn" onclick="toggleCart()"><i class='bx bx-cart'></i></button>
+        </header>
+
+        <aside class="sidebar" id="sidebarLeft">
+            <nav>
+                <ul>
+                    <li><a href="#">Pizzas</a></li>
+                        <hr>
+                    <li><a href="/Pgs/Soon.html">Bebidas</a></li>
+                        <hr>
+                    <li><a href="/Pgs/Soon.html">Promociones</a></li>
+                        <hr>
+                    <li><a href="/Pgs/Soon.html">Pizza Personalizada</a></li>
+                        <hr>    
+                </ul>
+                <button class="close-btn" onclick="toggleSidebar()"><i class='bx bx-arrow-back'></i></button>
+            </nav>
+        </aside>
+
+        <aside class="sidebar" id="sidebarRight">
+            
+            <h2 id="tucarrito"><i class='bx bx-cart'></i>Tu Carrito</h2>
+            <ul id="cartItems"></ul>
+            <li id="subtotal"></li>
+            <li><button class="finalizar-pedido-btn" onclick="finalizarPedido()">Finalizar Pedido</button></li>
+            <button class="close-btn" onclick="toggleCart()"><i class='bx bx-arrow-back'></i></button>
+        </aside>
+       <!--Lista de Items-->
+        <main class="pizza-list">
+            <div class="pizza-item-index" >
+                <h2>Pizza Margarita</h2>
+                <p>Tomate, Mozzarella, Albahaca</p>
+                <button class="list-btn"><a href="/Pgs/margarita.html">Ver más</a></button>
+            </div>
+            <div class="pizza-item-index" >
+                <h2>Pizza Pepperoni</h2>
+                <p>Pepperoni, Mozzarella, Salsa de Tomate</p>
+                <button class="list-btn"><a href="/Pgs/pepperoni.html" >Ver más</a></button>
+            </div>
+            <div class="pizza-item-index" >
+                <h2>Pizza Cuatro Quesos</h2>
+                <p>Mozzarella, Cheddar, Parmesano, Gorgonzola</p>
+                <button class="list-btn"><a href="/Pgs/cuatro-quesos.html" >Ver más</a></button>
+            </div>
+        </main>
+
+        <button class="custom-pizza-btn"><a href="/Pgs/Soon.html">Pizza Personalizada</a></button>
+
+        
+    </div>
+    <footer class="app-footer">
+        <p>© 2025 LePizza</p>
+    </footer>
+    <script src="/Assets/Js/script.js"></script>
+</body>
+</html>
